@@ -9,7 +9,7 @@ ENV HNS_VERSION="v0.7.0"
 RUN wget -q https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz -O - | tar -xzO docker/docker > /usr/local/bin/docker \
     && chmod +x /usr/local/bin/docker
 
-RUN apk add docker-compose=${COMPOSE_VERSION}
+RUN apk update && apk add docker-compose=${COMPOSE_VERSION}
 
 RUN wget -q https://storage.googleapis.com/kubernetes-release/release/${KUBE_VERSION}/bin/linux/amd64/kubectl -O /usr/local/bin/kubectl \
     && chmod +x /usr/local/bin/kubectl
