@@ -1,9 +1,9 @@
 FROM alpine:latest
 
-ENV DOCKER_VERSION="19.03.13"
-ENV KUBE_VERSION="v1.21.11"
-ENV HELM_VERSION="v3.4.2"
-ENV HNS_VERSION="v0.7.0"
+ENV DOCKER_VERSION="23.0.3"
+ENV KUBE_VERSION="v1.24.12"
+ENV HELM_VERSION="v3.11.2"
+ENV HNS_VERSION="v0.8.0"
 ENV NEAT_VERSION="v2.0.3"
 
 RUN wget -q https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz -O - | tar -xzO docker/docker > /usr/local/bin/docker \
