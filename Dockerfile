@@ -9,7 +9,7 @@ ENV NEAT_VERSION="v2.0.3"
 RUN wget -q https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz -O - | tar -xzO docker/docker > /usr/local/bin/docker \
     && chmod +x /usr/local/bin/docker
 
-RUN apk add --no-cache docker-compose
+RUN apk add --no-cache docker-compose gettext jq bash
 
 RUN wget -q https://storage.googleapis.com/kubernetes-release/release/${KUBE_VERSION}/bin/linux/amd64/kubectl -O /usr/local/bin/kubectl \
     && chmod +x /usr/local/bin/kubectl
